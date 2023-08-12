@@ -2,7 +2,7 @@
 activity-compose = "1.7.2"
 androidx-test-ext-junit = "1.1.5"
 agp = "8.2.0-alpha15"
-compose-bom = "2023.06.01"
+compose-bom = "2023.08.00"
 core-ktx = "1.10.1"
 detekt = "1.23.0"
 espresso-core = "3.5.1"
