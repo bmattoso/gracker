@@ -71,3 +71,30 @@ dependencies {
     debugImplementation(libs.ui.tooling)
     debugImplementation(libs.ui.test.manifest)
 }
+
+koverReport {
+    defaults {
+        mergeWith("release")
+    }
+
+    filters {
+        excludes {
+            classes(
+                "*BuildConfig*",
+                "*\$1*",
+                "*\$*",
+                "*Activity*"
+            )
+            packages(
+                "dagger.hilt.internal",
+                "hilt_aggregated_deps",
+            )
+            annotatedBy(
+                "*Composable*",
+                "*Entity*",
+                "*Dao*",
+                "*Database*"
+            )
+        }
+    }
+}
