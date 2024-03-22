@@ -33,7 +33,7 @@ jobs:
         run: ./gradlew assembleDebug
 
       - name: Upload APK Debug
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: gracker_debug_apk
           path: app/build/outputs/apk/debug/
