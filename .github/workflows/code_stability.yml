@@ -26,8 +26,8 @@ jobs:
           gradle-home-cache-cleanup: true
           cache-read-only: ${{ github.ref != 'refs/heads/master' }}
 
-      - name: Run Tests
-        run: ./gradlew --no-daemon test
+      - name: Run Tests with coverage
+        run: ./gradlew --no-daemon koverXmlReport
 
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v4.0.1
