@@ -8,7 +8,7 @@ detekt = "1.23.0"
 espresso-core = "3.5.1"
 junit = "4.13.2"
 kotlin = "1.8.10"
-kover = "0.7.2"
+kover = "0.7.6"
 lifecycle-runtime-ktx = "2.7.0"
 
 [libraries]
