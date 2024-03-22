@@ -27,7 +27,7 @@ jobs:
           cache-read-only: ${{ github.ref != 'refs/heads/master' }}
 
       - name: Run Tests
-        run: ./gradlew test
+        run: ./gradlew --no-daemon test
 
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v4.0.1
@@ -36,10 +36,13 @@ jobs:
           slug: bmattoso/gracker
 
       - name: Build Debug APK
-        run: ./gradlew assembleDebug
+        run: ./gradlew --no-daemon assembleDebug
 
       - name: Upload APK Debug
         uses: actions/upload-artifact@v3
         with:
           name: gracker_debug_apk
           path: app/build/outputs/apk/debug/
+
+      - name: Stop Gradle
+        run: ./gradlew --stop
