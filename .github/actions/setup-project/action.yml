@@ -1,0 +1,24 @@
+name: Setup project
+description: Step to checkout and setup gradle and java
+
+runs:
+  using: composite
+  steps:
+
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        fetch-tags: true
+
+    - name: Set up JDK 17
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'corretto'
+        cache: 'gradle'
+
+    - name: Set up Gradle
+      uses: gradle/actions/setup-gradle@v3
+      with:
+        gradle-home-cache-cleanup: true
+        cache-read-only: ${{ github.ref != 'refs/heads/master' }}

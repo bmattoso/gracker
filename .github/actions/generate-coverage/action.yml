@@ -1,0 +1,17 @@
+name: Create and upload code coverage
+description: Step to run kover and upload xml results to codecov
+
+runs:
+  using: composite
+  steps:
+
+    - name: Run Tests with coverage
+      shell: bash
+      run: ./gradlew --no-daemon koverXmlReport
+
+    - name: Upload coverage reports to Codecov
+      uses: codecov/codecov-action@v4.0.1
+      with:
+        fail_ci_if_error: true
+        token: ${{ secrets.CODECOV_TOKEN }}
+        slug: bmattoso/gracker
