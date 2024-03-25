@@ -18,6 +18,8 @@ jobs:
 
       - name: Generate Code Coverage
         uses: ./.github/actions/generate-coverage
+        with:
+          codecov-token: ${{ secrets.CODECOV_TOKEN }}
 
       - name: Build Debug APK
         run: ./gradlew --no-daemon assembleDebug

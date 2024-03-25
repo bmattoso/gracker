@@ -1,5 +1,9 @@
 name: Create and upload code coverage
 description: Step to run kover and upload xml results to codecov
+inputs:
+  codecov-token:
+    description: The token to submit reports to codecov
+    required: true
 
 runs:
   using: composite
@@ -13,5 +17,5 @@ runs:
       uses: codecov/codecov-action@v4.0.1
       with:
         fail_ci_if_error: true
-        token: ${{ secrets.CODECOV_TOKEN }}
+        token: ${{ inputs.codecov-token }}
         slug: bmattoso/gracker

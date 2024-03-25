@@ -23,3 +23,5 @@ jobs:
 
       - name: Generate Code Coverage
         uses: ./.github/actions/generate-coverage
+        with:
+          codecov-token: ${{ secrets.CODECOV_TOKEN }}
