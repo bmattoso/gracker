@@ -1,0 +1,20 @@
+name: Main Report Workflow
+
+on:
+  pull_request:
+    types:
+      - closed
+    branches:
+      - 'master'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Setup Project
+        uses: ./.github/actions/setup-project
+
+      - name: Generate Code Coverage
+        uses: ./.github/actions/generate-coverage
