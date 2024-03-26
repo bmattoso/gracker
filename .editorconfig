@@ -15,12 +15,15 @@ insert_final_newline = true
 indent_size = 4
 
 [*.{kt,kts}]
+ktlint_experimental = disabled
 ktlint_code_style = ktlint_official
 ktlint_ignore_back_ticked_identifier = true
 ktlint_standard = enabled
 ktlint_standard_filename = disabled
 ktlint_standard_function-naming = disabled
-ktlint_function_naming_ignore_when_annotated_with=Composable
+ktlint_function_naming_ignore_when_annotated_with = Composable
+ktlint_standard_multiline-expression-wrapping = disabled
+ktlint_standard_string-template-indent = disabled
 
 # Don't allow any wildcard imports
 ij_kotlin_packages_to_use_import_on_demand = unset
