@@ -25,6 +25,9 @@ jobs:
         with:
           sarif_file: build/reports/detekt/detekt.sarif
 
+      - name: Run ktlint check
+        run: ./gradlew detekt
+
       - name: Generate Code Coverage
         uses: ./.github/actions/generate-coverage
         with:
