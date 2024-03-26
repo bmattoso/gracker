@@ -5,14 +5,32 @@ plugins {
     alias(libs.plugins.kover) apply false
 }
 
+val reportMerge by tasks.registering(io.gitlab.arturbosch.detekt.report.ReportMergeTask::class) {
+    output.set(rootProject.layout.buildDirectory.file("reports/detekt/merge.sarif"))
+}
+
 subprojects {
     apply {
         plugin(rootProject.libs.plugins.detekt.get().pluginId)
     }
 
     detekt {
+        basePath = projectDir.path
+
         config.setFrom(rootProject.file("config/detekt/detekt.yml"))
         buildUponDefaultConfig = true
+
+        tasks.withType<io.gitlab.arturbosch.detekt.Detekt>().configureEach {
+            reports {
+                html.required.set(true)
+                sarif.required.set(true)
+            }
+            finalizedBy(reportMerge)
+        }
+
+        reportMerge {
+            input.from(tasks.withType<io.gitlab.arturbosch.detekt.Detekt>().map { it.sarifReportFile })
+        }
     }
 }
 
