@@ -1,15 +1,28 @@
 #!/usr/bin/env bash
+echo "Formatting code by ktlint..."
+CHANGED_FILES="$(git --no-pager diff --name-only --cached --diff-filter=ACMRTUXB --relative | grep '\.kt[s"]\?$')"
+if [ -z "$CHANGED_FILES" ]; then
+  echo "No Kotlin staged files."
+else
+  echo "Running ktlint format over these files:"
+  echo "$CHANGED_FILES"
+  ./gradlew ktlintFormat
+fi
+
+echo "Running ktlint check..."
+./gradlew ktlintCheck
+
 echo "Running detekt check..."
-OUTPUT="/tmp/detekt-$(date +%s)"
-./gradlew detekt > "$OUTPUT"
+DETEKT_OUTPUT="/tmp/detekt-$(date +%s)"
+./gradlew detekt > "$DETEKT_OUTPUT"
 EXIT_CODE=$?
 if [ $EXIT_CODE -ne 0 ]; then
-  cat "$OUTPUT"
-  rm "$OUTPUT"
+  cat "$DETEKT_OUTPUT"
+  rm "$DETEKT_OUTPUT"
   echo "***********************************************"
   echo "                 detekt failed                 "
   echo " Please fix the above issues before committing "
   echo "***********************************************"
   exit $EXIT_CODE
 fi
-rm "$OUTPUT"
+rm "$DETEKT_OUTPUT"
