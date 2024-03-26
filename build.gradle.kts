@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.detekt)
     alias(libs.plugins.kotlinAndroid) apply false
     alias(libs.plugins.kover) apply false
+    alias(libs.plugins.ktlint) apply false
 }
 
 val reportMerge by tasks.registering(io.gitlab.arturbosch.detekt.report.ReportMergeTask::class) {
@@ -12,6 +13,7 @@ val reportMerge by tasks.registering(io.gitlab.arturbosch.detekt.report.ReportMe
 subprojects {
     apply {
         plugin(rootProject.libs.plugins.detekt.get().pluginId)
+        plugin(rootProject.libs.plugins.ktlint.get().pluginId)
     }
 
     detekt {

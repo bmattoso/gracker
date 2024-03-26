@@ -26,7 +26,7 @@ android {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                "proguard-rules.pro",
             )
         }
     }
@@ -83,7 +83,7 @@ koverReport {
                 "*BuildConfig*",
                 "*\$1*",
                 "*\$*",
-                "*Activity*"
+                "*Activity*",
             )
             packages(
                 "dagger.hilt.internal",
@@ -93,7 +93,7 @@ koverReport {
                 "*Composable*",
                 "*Entity*",
                 "*Dao*",
-                "*Database*"
+                "*Database*",
             )
         }
     }
