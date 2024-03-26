@@ -68,3 +68,11 @@ The Android app utilizes several common dependencies to enhance functionality an
 7. [Navigation Component](https://developer.android.com/guide/navigation/navigation-getting-started): A Jetpack library for app navigation, including fragment transactions.
 
 These dependencies play a crucial role in providing a seamless user experience, efficient network communication, and data management within the app.
+
+## Collaboration project setup
+
+1. Setup hooks
+   ```bash
+    ./config/setup.sh
+   ```
+2. Setup secrets.properties
