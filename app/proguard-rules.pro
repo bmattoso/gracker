@@ -19,3 +19,10 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+# Lokalise proguard rules
+# referenced by https://developers.lokalise.com/docs/android-sdk-v2?#step-3-include-lokalise-sdk-in-your-project
+-keep class com.lokalise.** { *; }
+-dontwarn com.lokalise.*
+-keep @interface io.realm.annotations.RealmModule { *; }
+-keep class io.realm.annotations.RealmModule { *; }

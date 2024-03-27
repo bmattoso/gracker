@@ -58,6 +58,8 @@ dependencies {
     implementation(libs.firebase.crashlytics)
     implementation(libs.firebase.performance)
 
+    implementation(libs.lokalise)
+
     testImplementation(libs.junit)
 
     androidTestImplementation(libs.androidx.test.ext.junit)
