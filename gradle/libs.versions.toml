@@ -16,6 +16,7 @@ kotlin = "1.9.23"
 kover = "0.7.6"
 ktlint = "12.1.0"
 lifecycle-runtime-ktx = "2.7.0"
+lokalise= "2.1.1"
 # Android SDK versions
 minSdk = "24"
 compileSdk = "34"
@@ -34,6 +35,9 @@ firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.r
 firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics" }
 firebase-crashlytics = { group = "com.google.firebase", name = "firebase-crashlytics" }
 firebase-performance = { group = "com.google.firebase", name = "firebase-perf" }
+
+lokalise= { group = "com.lokalise.android", name = "sdk", version.ref = "lokalise" }
+
 
 ui = { group = "androidx.compose.ui", name = "ui" }
 ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
