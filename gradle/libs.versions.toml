@@ -8,6 +8,8 @@ core-ktx = "1.12.0"
 detekt = "1.23.6"
 espresso-core = "3.5.1"
 firebase = "32.8.0"
+firebase-crashlytics = "2.9.9"
+firebase-performance = "1.4.2"
 google-services = "4.4.1"
 junit = "4.13.2"
 kotlin = "1.9.23"
@@ -15,9 +17,9 @@ kover = "0.7.6"
 ktlint = "12.1.0"
 lifecycle-runtime-ktx = "2.7.0"
 # Android SDK versions
-minSdk="24"
-compileSdk="34"
-targetSdk="34"
+minSdk = "24"
+compileSdk = "34"
+targetSdk = "34"
 
 [libraries]
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
@@ -27,8 +29,12 @@ espresso-core = { group = "androidx.test.espresso", name = "espresso-core", vers
 lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle-runtime-ktx" }
 activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activity-compose" }
 compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "compose-bom" }
+
 firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebase" }
-firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics"}
+firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics" }
+firebase-crashlytics = { group = "com.google.firebase", name = "firebase-crashlytics" }
+firebase-performance = { group = "com.google.firebase", name = "firebase-perf" }
+
 ui = { group = "androidx.compose.ui", name = "ui" }
 ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
 ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
@@ -36,7 +42,6 @@ ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview
 ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 material3 = { group = "androidx.compose.material3", name = "material3" }
-detekt-formatting = { group = "io.gitlab.arturbosch.detekt", name = "detekt-formatting", version.ref = "detekt" }
 
 # Build Logic dependencies
 android-gradle-plugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
@@ -45,6 +50,8 @@ kotlin-gradle-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-p
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
+firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "firebase-crashlytics" }
+firebase-performance = { id = "com.google.firebase.firebase-perf", version.ref = "firebase-performance" }
 google-services = { id = "com.google.gms.google-services", version.ref = "google-services" }
 kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kover = { id = "org.jetbrains.kotlinx.kover", version.ref = "kover" }

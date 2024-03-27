@@ -1,7 +1,9 @@
 plugins {
     id("gracker.android.app")
-    alias(libs.plugins.kover)
+    alias(libs.plugins.firebase.crashlytics)
+    alias(libs.plugins.firebase.performance)
     alias(libs.plugins.google.services)
+    alias(libs.plugins.kover)
 }
 
 android {
@@ -41,6 +43,8 @@ dependencies {
 
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.analytics)
+    implementation(libs.firebase.crashlytics)
+    implementation(libs.firebase.performance)
 
     testImplementation(libs.junit)
 
