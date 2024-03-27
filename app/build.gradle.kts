@@ -50,7 +50,9 @@ android {
 
 dependencies {
 
-    implementation(libs.core.ktx)
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.startup)
+
     implementation(libs.lifecycle.runtime.ktx)
 
     implementation(platform(libs.firebase.bom))

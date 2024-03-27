@@ -22,7 +22,7 @@ internal fun Project.configureCompose(
             implementation(platform(composeBom))
             androidTestImplementation(platform(composeBom))
 
-            implementation(dependency("activity-compose"))
+            implementation(dependency("androidx-activity-compose"))
 
             implementation(dependency("material3"))
 
