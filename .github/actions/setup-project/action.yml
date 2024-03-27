@@ -1,5 +1,9 @@
 name: Setup project
 description: Step to checkout and setup gradle and java
+inputs:
+    google-services-file:
+        description: The google-services.json formatted on base64
+        required: true
 
 runs:
   using: composite
@@ -17,3 +21,7 @@ runs:
       with:
         gradle-home-cache-cleanup: true
         cache-read-only: ${{ github.ref != 'refs/heads/master' }}
+
+    - name: Download google-services.json
+      shell: bash
+      run: echo ${{ inputs.google-services-file }} | base64 -di > app/google-services.json
