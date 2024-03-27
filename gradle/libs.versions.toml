@@ -12,6 +12,9 @@ kotlin = "1.9.23"
 kover = "0.7.6"
 ktlint = "12.1.0"
 lifecycle-runtime-ktx = "2.7.0"
+minSdk="24"
+compileSdk="34"
+targetSdk="34"
 
 [libraries]
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
@@ -29,6 +32,10 @@ ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 material3 = { group = "androidx.compose.material3", name = "material3" }
 detekt-formatting = { group = "io.gitlab.arturbosch.detekt", name = "detekt-formatting", version.ref = "detekt" }
+
+# Build Logic dependencies
+android-gradle-plugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
+kotlin-gradle-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
