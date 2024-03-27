@@ -1,17 +1,13 @@
 plugins {
-    alias(libs.plugins.androidApplication)
-    alias(libs.plugins.kotlinAndroid)
+    id("gracker.android.app")
     alias(libs.plugins.kover)
 }
 
 android {
-    namespace = "br.com.gracker"
-    compileSdk = 34
+    namespace = "br.com.bmattoso.gracker"
 
     defaultConfig {
-        applicationId = "br.com.gracker"
-        minSdk = 24
-        targetSdk = 34
+        applicationId = "br.com.bmattoso.gracker"
         versionCode = 1
         versionName = "1.0"
 
@@ -29,13 +25,6 @@ android {
                 "proguard-rules.pro",
             )
         }
-    }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = "1.8"
     }
     buildFeatures {
         compose = true
