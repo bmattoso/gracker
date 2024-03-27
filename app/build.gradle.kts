@@ -35,6 +35,17 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+
+    /**
+     * This code snippet is disabling the bundle language split due an error from Lokalise.
+     * https://developers.lokalise.com/docs/android-sdk-v2?#limitations-and-special-notes
+     */
+    @Suppress("UnstableApiUsage")
+    bundle {
+        language {
+            enableSplit = false
+        }
+    }
 }
 
 dependencies {
