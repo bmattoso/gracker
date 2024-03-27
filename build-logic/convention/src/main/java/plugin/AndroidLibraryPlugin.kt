@@ -1,8 +1,11 @@
 package plugin
 
+import com.android.build.api.dsl.CommonExtension
 import extension.configureAndroid
+import extension.configureCompose
 import org.gradle.api.Plugin
 import org.gradle.api.Project
+import org.gradle.kotlin.dsl.configure
 
 class AndroidLibraryPlugin : Plugin<Project> {
 
@@ -14,6 +17,9 @@ class AndroidLibraryPlugin : Plugin<Project> {
             }
 
             configureAndroid()
+            extensions.configure(CommonExtension::class) {
+                configureCompose(this)
+            }
         }
     }
 }
