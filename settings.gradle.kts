@@ -1,4 +1,5 @@
 pluginManagement {
+    includeBuild("build-logic")
     repositories {
         google()
         mavenCentral()
@@ -17,4 +18,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "gracker"
 include(":app")
- 
