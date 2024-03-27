@@ -2,6 +2,7 @@ plugins {
     id("gracker.android.app")
     alias(libs.plugins.firebase.crashlytics)
     alias(libs.plugins.firebase.performance)
+    alias(libs.plugins.google.secrets)
     alias(libs.plugins.google.services)
     alias(libs.plugins.kover)
 }
@@ -93,4 +94,8 @@ koverReport {
             )
         }
     }
+}
+
+secrets {
+    propertiesFileName = "secrets.properties"
 }

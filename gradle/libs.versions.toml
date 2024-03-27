@@ -11,6 +11,7 @@ espresso-core = "3.5.1"
 firebase = "32.8.0"
 firebase-crashlytics = "2.9.9"
 firebase-performance = "1.4.2"
+google-secrets = "2.0.1"
 google-services = "4.4.1"
 junit = "4.13.2"
 kotlin = "1.9.23"
@@ -56,13 +57,20 @@ kotlin-gradle-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-p
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
+
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
+
 firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "firebase-crashlytics" }
 firebase-performance = { id = "com.google.firebase.firebase-perf", version.ref = "firebase-performance" }
+
+google-secrets = { id = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin", version.ref = "google-secrets"}
 google-services = { id = "com.google.gms.google-services", version.ref = "google-services" }
+
 kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+
 kover = { id = "org.jetbrains.kotlinx.kover", version.ref = "kover" }
 ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint" }
+
 
 [bundles]
 
