@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.androidApplication) apply false
     alias(libs.plugins.detekt)
+    alias(libs.plugins.google.services) apply false
     alias(libs.plugins.kotlinAndroid) apply false
     alias(libs.plugins.kover) apply false
     alias(libs.plugins.ktlint) apply false

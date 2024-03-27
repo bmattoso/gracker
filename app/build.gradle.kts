@@ -1,6 +1,7 @@
 plugins {
     id("gracker.android.app")
     alias(libs.plugins.kover)
+    alias(libs.plugins.google.services)
 }
 
 android {
@@ -37,6 +38,9 @@ dependencies {
 
     implementation(libs.core.ktx)
     implementation(libs.lifecycle.runtime.ktx)
+
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.analytics)
 
     testImplementation(libs.junit)
 

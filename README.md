@@ -75,4 +75,6 @@ These dependencies play a crucial role in providing a seamless user experience, 
    ```bash
     ./config/setup.sh
    ```
-2. Setup secrets.properties
+2. Download the file `google-services.json` or ask for someone of the team
+3. Fill the file `secrets.properties` or ask for someone of the team
+4. 
