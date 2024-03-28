@@ -26,7 +26,7 @@ class MainActivity : ComponentActivity() {
                 ) {
                     Text(
                         text = stringResource(id = R.string.hello_user, "Bruno"),
-                        color = Color.Black
+                        color = Color.Black,
                     )
                 }
             }
