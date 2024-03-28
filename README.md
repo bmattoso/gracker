@@ -66,7 +66,7 @@ The Android app utilizes several common dependencies to enhance functionality an
 1. [Jetpack Compose](https://developer.android.com/jetpack/compose): A modern UI toolkit for Android, enabling declarative UI development.
 2. [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel): Part of the Jetpack library, it separates UI-related data from UI components.
 3. [Retrofit](https://square.github.io/retrofit/): A popular HTTP client for Android, simplifying network requests and data retrieval.
-4. [Kotlinx Serialization](https://github.com/Kotlin/kotlinx.serialization): Kotlin serialization consists of a compiler plugin, that generates visitor code for serializable classes, runtime library with core serialization API and support libraries with various serialization formats
+4. [Kotlinx Serialization](https://github.com/Kotlin/kotlinx.serialization): Kotlin serialization consists of a compiler plugin, that generates visitor code for serializable classes, runtime library with core serialization API and support libraries with various serialization formats.
 5. [Coroutine](https://kotlinlang.org/docs/coroutines-overview.html): Kotlin Coroutines for asynchronous programming, improving concurrency.
 6. [Room](https://developer.android.com/jetpack/androidx/releases/room): An Android library for database management, simplifying data storage.
 7. [Navigation Component](https://developer.android.com/guide/navigation/navigation-getting-started): A Jetpack library for app navigation, including fragment transactions.
