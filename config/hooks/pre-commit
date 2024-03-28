@@ -9,6 +9,9 @@ else
   ./gradlew ktlintFormat
 fi
 
+echo "Adding formatted files"
+git add -A
+
 echo "Running ktlint check..."
 ./gradlew ktlintCheck
 

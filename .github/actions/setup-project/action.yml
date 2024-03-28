@@ -4,6 +4,9 @@ inputs:
     google-services-file:
         description: The google-services.json formatted on base64
         required: true
+    secrets-properties-file:
+        description: The secrets.properties formatted on base64
+        required: true
 
 runs:
   using: composite
@@ -25,3 +28,7 @@ runs:
     - name: Download google-services.json
       shell: bash
       run: echo ${{ inputs.google-services-file }} | base64 -di > app/google-services.json
+
+    - name: Download secrets.properties
+      shell: bash
+      run: echo ${{ inputs.secrets-properties-file }} | base64 -di > secrets.properties
