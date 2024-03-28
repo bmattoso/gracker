@@ -22,6 +22,7 @@ jobs:
         uses: ./.github/actions/setup-project
         with:
             google-services-file: ${{ secrets.GOOGLE_SERVICES_JSON_BASE64 }}
+            secrets-properties-file: ${{ secrets.SECRETS_PROPERTIES_BASE64 }}
 
       - name: Generate Code Coverage
         uses: ./.github/actions/generate-coverage
