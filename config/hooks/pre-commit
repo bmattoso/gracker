@@ -7,10 +7,9 @@ else
   echo "Running ktlint format over these files:"
   echo "$CHANGED_FILES"
   ./gradlew ktlintFormat
+  echo "Adding formatted files"
+  git add $CHANGED_FILES
 fi
-
-echo "Adding formatted files"
-git add -A
 
 echo "Running ktlint check..."
 ./gradlew ktlintCheck
