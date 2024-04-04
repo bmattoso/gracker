@@ -27,8 +27,8 @@ runs:
 
     - name: Download google-services.json
       shell: bash
-      run: echo ${{ inputs.google-services-file }} | base64 -di > app/google-services.json
+      run: echo "${{ inputs.google-services-file }}" | base64 --decode > app/google-services.json
 
     - name: Download secrets.properties
       shell: bash
-      run: echo ${{ inputs.secrets-properties-file }} | base64 -di > secrets.properties
+      run: echo "${{ inputs.secrets-properties-file }}" | base64 --decode > secrets.properties
