@@ -8,7 +8,7 @@ android {
 }
 
 dependencies {
-//    implementation(project(":history"))
+    implementation(project(":history"))
 }
 
 plugins.withId("app.cash.paparazzi") {

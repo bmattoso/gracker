@@ -8,6 +8,7 @@ plugins {
     alias(libs.plugins.kotlinAndroid) apply false
     alias(libs.plugins.kover) apply false
     alias(libs.plugins.ktlint) apply false
+    alias(libs.plugins.paparazzi) apply false
 }
 
 val reportMerge by tasks.registering(io.gitlab.arturbosch.detekt.report.ReportMergeTask::class) {
@@ -39,6 +40,5 @@ subprojects {
         }
     }
 }
-
 
 true // Needed to make the Suppress annotation work for the plugins block
