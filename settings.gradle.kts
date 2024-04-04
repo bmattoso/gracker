@@ -20,3 +20,4 @@ dependencyResolutionManagement {
 rootProject.name = "gracker"
 include(":app")
 include(":snapshot")
+include(":history")
