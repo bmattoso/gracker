@@ -51,6 +51,9 @@ android {
 
 dependencies {
 
+    kover(project(":history"))
+    kover(project(":snapshot"))
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.startup)
 
