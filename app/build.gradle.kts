@@ -1,3 +1,5 @@
+import com.google.firebase.crashlytics.buildtools.gradle.CrashlyticsExtension
+
 plugins {
     id("gracker.android.app")
     alias(libs.plugins.firebase.crashlytics)
@@ -29,6 +31,16 @@ android {
                 "proguard-rules.pro",
             )
             signingConfig = signingConfigs.getByName("debug")
+
+            configure<CrashlyticsExtension> {
+                mappingFileUploadEnabled = true
+            }
+        }
+
+        debug {
+            configure<CrashlyticsExtension> {
+                mappingFileUploadEnabled = false
+            }
         }
     }
     packaging {

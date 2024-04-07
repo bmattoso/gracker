@@ -26,3 +26,7 @@
 -dontwarn com.lokalise.*
 -keep @interface io.realm.annotations.RealmModule { *; }
 -keep class io.realm.annotations.RealmModule { *; }
+
+# Firebase Crashlytics rules
+-keepattributes SourceFile,LineNumberTable        # Keep file names and line numbers.
+-keep public class * extends java.lang.Exception
