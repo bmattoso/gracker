@@ -36,6 +36,21 @@ jobs:
         with:
           codecov-token: ${{ secrets.CODECOV_TOKEN }}
 
+      - name: Validate Snapshot tests
+        run: ./gradlew verifyPaparazziDebug
+
+      - name: Upload Paparazzi Test Results
+        uses: actions/upload-artifact@v2
+        with:
+            name: paparazzi-debug-test-result
+            path: snapshot/build/reports/test/testDebugUnitTest
+
+      - name: Upload Paparazzi Photos Results
+        uses: actions/upload-artifact@v2
+        with:
+          name: paparazzi-debug-photo-result
+          path: snapshot/build/reports/paparazzi/debug
+
       - name: Build Debug APK
         run: ./gradlew --no-daemon assembleDebug
 
