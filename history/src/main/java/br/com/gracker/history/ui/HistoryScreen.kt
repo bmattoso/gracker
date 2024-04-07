@@ -15,7 +15,7 @@ fun HistoryScreenContent() {
         modifier = Modifier.background(Color.White),
     ) {
         Text(
-            modifier = Modifier.padding(8.dp),
+            modifier = Modifier.padding(12.dp),
             text = "No game history",
             color = Color.Black,
         )
