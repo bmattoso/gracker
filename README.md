@@ -2,7 +2,7 @@
 
 [![Instrumented tests](https://app.bitrise.io/app/034d9dae-9ecb-41d2-a02b-a3694439c181/status.svg?token=kV1BO7WyX9oqkPvpAQZBbw&branch=main)](https://app.bitrise.io/app/034d9dae-9ecb-41d2-a02b-a3694439c181)
 [![codecov](https://codecov.io/gh/bmattoso/gracker/graph/badge.svg?token=Av8EVTWbbt)](https://codecov.io/gh/bmattoso/gracker)
-[![CI]](https://github.com/github/docs/actions/workflows/main_report.yml/badge.svg?
+[![CI]](https://github.com/bmattoso/gracker/actions/workflows/main_report.yml/badge.svg)
 
 Welcome to **Gracker**, the ultimate companion app for board game enthusiasts!
 
