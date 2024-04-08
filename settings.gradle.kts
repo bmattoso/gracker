@@ -21,3 +21,4 @@ rootProject.name = "gracker"
 include(":app")
 include(":snapshot")
 include(":history")
+include(":core:network")
