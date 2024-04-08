@@ -14,7 +14,7 @@ class AndroidHiltPlugin : Plugin<Project> {
 
     override fun apply(target: Project) {
         with(target) {
-            pluginManager.apply {
+            with(pluginManager) {
                 apply(plugin("hilt").pluginId)
                 apply(plugin("ksp").pluginId)
             }
