@@ -56,8 +56,6 @@ android-gradle-plugin = { group = "com.android.tools.build", name = "gradle", ve
 kotlin-gradle-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
 
 [plugins]
-androidApplication = { id = "com.android.application", version.ref = "agp" }
-
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 
 firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "firebase-crashlytics" }
@@ -72,5 +70,10 @@ kover = { id = "org.jetbrains.kotlinx.kover", version.ref = "kover" }
 ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint" }
 
 paparazzi = { id = "app.cash.paparazzi", version.ref = "paparazzi" }
+
+# Custom project plugins
+gracker-android-application = { id = "gracker.android.app", version = "unspecified" }
+gracker-android-library = { id = "gracker.android.library", version = "unspecified" }
+
 [bundles]
 
