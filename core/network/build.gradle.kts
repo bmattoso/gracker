@@ -16,6 +16,9 @@ android {
     }
 
     dependencies {
+        implementation(libs.okhttp)
+        implementation(libs.retrofit)
+
         testImplementation(libs.junit)
     }
 }
