@@ -10,7 +10,7 @@ import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.dependencies
 
-class HiltPlugin : Plugin<Project> {
+class AndroidHiltPlugin : Plugin<Project> {
 
     override fun apply(target: Project) {
         with(target) {

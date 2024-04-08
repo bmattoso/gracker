@@ -86,6 +86,7 @@ paparazzi = { id = "app.cash.paparazzi", version.ref = "paparazzi" }
 
 # Custom project plugins
 gracker-android-application = { id = "gracker.android.app", version = "unspecified" }
+gracker-android-hilt = { id = "gracker.android.hilt", version = "unspecified" }
 gracker-android-library = { id = "gracker.android.library", version = "unspecified" }
 
 [bundles]
