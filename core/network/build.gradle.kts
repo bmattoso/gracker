@@ -4,8 +4,18 @@ plugins {
 
 android {
     namespace = "br.com.gracker.core.network"
-}
 
-dependencies {
-    testImplementation(libs.junit)
+    buildTypes {
+        release {
+            isMinifyEnabled = true
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro",
+            )
+        }
+    }
+
+    dependencies {
+        testImplementation(libs.junit)
+    }
 }
