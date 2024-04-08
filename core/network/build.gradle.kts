@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.gracker.android.library)
+    alias(libs.plugins.gracker.android.hilt)
 }
 
 android {

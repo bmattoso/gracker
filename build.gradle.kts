@@ -1,14 +1,16 @@
 plugins {
-    alias(libs.plugins.gracker.android.application) apply false
-    alias(libs.plugins.gracker.android.library) apply false
     alias(libs.plugins.detekt)
     alias(libs.plugins.firebase.crashlytics) apply false
     alias(libs.plugins.firebase.performance) apply false
     alias(libs.plugins.google.secrets) apply false
     alias(libs.plugins.google.services) apply false
+    alias(libs.plugins.gracker.android.application) apply false
+    alias(libs.plugins.gracker.android.library) apply false
+    alias(libs.plugins.gracker.android.hilt) apply false
     alias(libs.plugins.hilt) apply false
     alias(libs.plugins.kotlinAndroid) apply false
     alias(libs.plugins.kover) apply false
+    alias(libs.plugins.ksp) apply false
     alias(libs.plugins.ktlint) apply false
     alias(libs.plugins.paparazzi) apply false
 }
