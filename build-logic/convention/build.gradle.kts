@@ -32,5 +32,9 @@ gradlePlugin {
             id = "gracker.android.app"
             implementationClass = "plugin.AndroidApplicationPlugin"
         }
+        register("androidHilt") {
+            id = "gracker.android.hilt"
+            implementationClass = "plugin.AndroidHiltPlugin"
+        }
     }
 }
