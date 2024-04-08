@@ -1,7 +1,7 @@
 import com.google.firebase.crashlytics.buildtools.gradle.CrashlyticsExtension
 
 plugins {
-    id("gracker.android.app")
+    alias(libs.plugins.gracker.android.application)
     alias(libs.plugins.firebase.crashlytics)
     alias(libs.plugins.firebase.performance)
     alias(libs.plugins.google.secrets)
@@ -65,6 +65,7 @@ dependencies {
 
     kover(project(":history"))
     kover(project(":snapshot"))
+    kover(project(":core:network"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.startup)
