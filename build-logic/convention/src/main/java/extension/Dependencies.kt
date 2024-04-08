@@ -16,6 +16,8 @@ fun Project.dependency(
     dependencyName: String
 ): Provider<MinimalExternalModuleDependency> = libs.findLibrary(dependencyName).get()
 
+fun Project.plugin(pluginName: String): PluginDependency = libs.findPlugin(pluginName).get().get()
+
 fun Project.versionOf(reference: String): String = libs.findVersion(reference).get().toString()
 
 fun DependencyHandler.implementation(dependencyNotation: Any) = add("implementation", dependencyNotation)
@@ -26,3 +28,5 @@ fun DependencyHandler.testImplementation(dependencyNotation: Any) = add("testImp
 
 fun DependencyHandler.androidTestImplementation(dependencyNotation: Any) =
     add("androidTestImplementation", dependencyNotation)
+
+fun DependencyHandler.ksp(dependencyNotation: Any) = add("ksp", dependencyNotation)
