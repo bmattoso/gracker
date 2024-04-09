@@ -20,6 +20,9 @@ class AndroidLibraryPlugin : Plugin<Project> {
 
             configureAndroid()
             extensions.configure(CommonExtension::class) {
+                buildFeatures {
+                    buildConfig = true
+                }
                 configureCompose(this)
             }
         }
