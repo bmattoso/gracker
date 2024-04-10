@@ -15,6 +15,7 @@ google-secrets = "2.0.1"
 google-services = "4.4.1"
 junit = "4.13.2"
 hilt = "2.50"
+jaxb = "2.3.1"
 kotlin = "1.9.23"
 kover = "0.7.6"
 ktlint = "12.1.0"
@@ -62,6 +63,7 @@ ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 material3 = { group = "androidx.compose.material3", name = "material3" }
 
 retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+
 # Build Logic dependencies
 android-gradle-plugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
 kotlin-gradle-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
