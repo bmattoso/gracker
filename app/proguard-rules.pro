@@ -20,6 +20,21 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 
+-keep class com.google.android.material.**
+-dontwarn com.google.android.material.*
+-keep class com.google.android.material.bottomappbar.BottomAppBar
+-dontwarn com.google.android.material.bottomappbar.BottomAppBar
+-keep class com.google.android.material.bottomnavigation.BottomNavigationView
+-dontwarn com.google.android.material.bottomnavigation.BottomNavigationView
+-keep class com.google.android.material.navigation.NavigationView
+-dontwarn com.google.android.material.navigation.NavigationView
+-keep class com.google.android.material.navigationrail.NavigationRailView
+-dontwarn com.google.android.material.navigationrail.NavigationRailView
+-keep class com.google.android.material.tabs.TabItem
+-dontwarn com.google.android.material.tabs.TabItem
+-keep class com.google.android.material.textfield.TextInputLayout
+-dontwarn com.google.android.material.textfield.TextInputLayout
+
 # Lokalise proguard rules
 # referenced by https://developers.lokalise.com/docs/android-sdk-v2?#step-3-include-lokalise-sdk-in-your-project
 -keep class com.lokalise.** { *; }
@@ -30,3 +45,6 @@
 # Firebase Crashlytics rules
 -keepattributes SourceFile,LineNumberTable        # Keep file names and line numbers.
 -keep public class * extends java.lang.Exception
+
+-keep class com.google.firebase.crashlytics.** { *; }
+-dontwarn com.google.firebase.crashlytics.*
