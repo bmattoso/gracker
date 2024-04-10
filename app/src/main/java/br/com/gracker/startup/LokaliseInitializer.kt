@@ -16,8 +16,6 @@ class LokaliseInitializer : Initializer<Lokalise> {
                 sdkToken = BuildConfig.LOKALISE_SDK_TOKEN,
                 projectId = BuildConfig.LOKALISE_PROJECT_ID,
             )
-            isPreRelease = true
-            updateTranslations()
         }
     }
 
