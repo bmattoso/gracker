@@ -16,6 +16,7 @@ class AndroidApplicationPlugin : Plugin<Project> {
                 apply("com.android.application")
                 apply(plugin("kotlinAndroid").pluginId)
                 apply(plugin("gracker-android-hilt").pluginId)
+                apply(plugin("compose-compiler").pluginId)
             }
 
             configureAndroid()
