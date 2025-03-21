@@ -13,7 +13,7 @@ class AndroidApplicationPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
             with(pluginManager) {
-                apply("com.android.application")
+                apply(plugin("android-application").pluginId)
                 apply(plugin("kotlinAndroid").pluginId)
                 apply(plugin("gracker-android-hilt").pluginId)
                 apply(plugin("compose-compiler").pluginId)
