@@ -1,13 +1,25 @@
 version: 2
 updates:
-  - package-ecosystem: "gradle"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-    rebase-strategy: "disabled"
+    -   package-ecosystem: "gradle"
+        directory: "/"
+        schedule:
+            interval: "weekly"
+        rebase-strategy: "disabled"
+        commit-message:
+            prefix: "Gradle dependenciess"
+        groups:
+            gradle-dependencies:
+                patterns:
+                    - "**"
 
-  - package-ecosystem: "github-actions"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-    rebase-strategy: "disabled"
+    -   package-ecosystem: "github-actions"
+        directory: "/"
+        schedule:
+            interval: "weekly"
+        rebase-strategy: "disabled"
+        commit-message:
+            prefix: "GitHub Actions dependencies"
+        groups:
+            actions-dependencies:
+                patterns:
+                    - "**"
