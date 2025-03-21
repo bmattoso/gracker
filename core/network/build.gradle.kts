@@ -16,10 +16,18 @@ android {
         }
     }
 
+    buildFeatures {
+        buildConfig = true
+    }
+
     dependencies {
         implementation(libs.okhttp)
         implementation(libs.retrofit)
 
         testImplementation(libs.junit)
     }
+}
+
+secrets {
+    propertiesFileName = "secrets.properties"
 }
