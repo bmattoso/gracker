@@ -16,6 +16,7 @@ class AndroidLibraryPlugin : Plugin<Project> {
                 apply("com.android.library")
                 apply(plugin("kotlinAndroid").pluginId)
                 apply(plugin("kover").pluginId)
+                apply(plugin("google-secrets").pluginId)
             }
 
             configureAndroid()
