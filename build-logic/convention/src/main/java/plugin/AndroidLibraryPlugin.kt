@@ -13,10 +13,11 @@ class AndroidLibraryPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
             with(pluginManager) {
-                apply("com.android.library")
+                apply(plugin("android-library").pluginId)
                 apply(plugin("kotlinAndroid").pluginId)
                 apply(plugin("kover").pluginId)
                 apply(plugin("google-secrets").pluginId)
+                apply(plugin("compose-compiler").pluginId)
             }
 
             configureAndroid()

@@ -86,29 +86,27 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
 }
 
-koverReport {
-    defaults {
-        mergeWith("release")
-    }
-
-    filters {
-        excludes {
-            classes(
-                "*BuildConfig*",
-                "*\$1*",
-                "*\$*",
-                "*Activity*",
-            )
-            packages(
-                "dagger.hilt.internal",
-                "hilt_aggregated_deps",
-            )
-            annotatedBy(
-                "*Composable*",
-                "*Entity*",
-                "*Dao*",
-                "*Database*",
-            )
+kover {
+    reports {
+        filters {
+            excludes {
+                classes(
+                    "*BuildConfig*",
+                    "*\$1*",
+                    "*\$*",
+                    "*Activity*",
+                )
+                packages(
+                    "dagger.hilt.internal",
+                    "hilt_aggregated_deps",
+                )
+                annotatedBy(
+                    "*Composable*",
+                    "*Entity*",
+                    "*Dao*",
+                    "*Database*",
+                )
+            }
         }
     }
 }

@@ -12,10 +12,6 @@ internal fun Project.configureCompose(
             compose = true
         }
 
-        composeOptions {
-            kotlinCompilerExtensionVersion = versionOf("compose-compiler-extension")
-        }
-
         dependencies {
             val composeBom = dependency("compose-bom")
 
