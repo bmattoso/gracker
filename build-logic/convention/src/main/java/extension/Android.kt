@@ -5,6 +5,7 @@ import org.gradle.api.JavaVersion
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.dependencies
+import org.jetbrains.kotlin.gradle.dsl.kotlinExtension
 
 private const val COMPILE_SDK = "compileSdk"
 private const val MIN_SDK = "minSdk"
@@ -18,6 +19,8 @@ fun Project.configureAndroid() {
             minSdk = versionOf(MIN_SDK).toInt()
             targetSdk = versionOf(TARGET_SDK).toInt()
         }
+
+        kotlinExtension.jvmToolchain(17)
 
         compileOptions {
             sourceCompatibility = JavaVersion.VERSION_17

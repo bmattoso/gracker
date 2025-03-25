@@ -6,16 +6,21 @@ plugins {
 
 group = "br.com.bmattoso.gracker.buildlogic"
 
+kotlin {
+    jvmToolchain(17)
+}
+
 java {
     sourceCompatibility = JavaVersion.VERSION_17
     targetCompatibility = JavaVersion.VERSION_17
 }
 
 tasks.withType<KotlinCompile>().configureEach {
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_17.toString()
+    compilerOptions {
+        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
     }
 }
+
 
 dependencies {
     compileOnly(libs.android.gradle.plugin)
