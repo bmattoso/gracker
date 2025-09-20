@@ -1,12 +1,12 @@
 package br.com.gracker.core.network.boardgame.mapper
 
-import br.com.gracker.core.network.boardgame.service.response.CategoryResponse
-import br.com.gracker.core.network.boardgame.service.response.DevelopmentTeamMemberResponse
+import br.com.gracker.core.network.boardgame.service.response.Category
+import br.com.gracker.core.network.boardgame.service.response.DevelopmentTeamMember
 import br.com.gracker.core.network.boardgame.service.response.GameDetailResponse
-import br.com.gracker.core.network.boardgame.service.response.GameStatisticsResponse
-import br.com.gracker.core.network.boardgame.service.response.MechanicResponse
-import br.com.gracker.core.network.boardgame.service.response.PublisherResponse
-import br.com.gracker.core.network.boardgame.service.response.ShoppingStatisticsResponse
+import br.com.gracker.core.network.boardgame.service.response.GameStatistics
+import br.com.gracker.core.network.boardgame.service.response.Mechanic
+import br.com.gracker.core.network.boardgame.service.response.Publisher
+import br.com.gracker.core.network.boardgame.service.response.ShoppingStatistics
 import br.com.gracker.core.network.boardgame.service.response.SuggestedPlayersAgePoll
 import com.google.common.truth.Truth.assertThat
 import org.junit.Test
@@ -29,23 +29,23 @@ class GameDetailMapperTest {
                 SuggestedPlayersAgePoll("8", 1),
             ),
             categories = listOf(
-                CategoryResponse("1002", "Card Game"),
+                Category("1002", "Card Game"),
             ),
             mechanic = listOf(
-                MechanicResponse("2004", "Set Collection"),
+                Mechanic("2004", "Set Collection"),
             ),
             expansions = emptyList(),
             publishers = listOf(
-                PublisherResponse("2330", "Playful Minds"),
+                Publisher("2330", "Playful Minds"),
             ),
             developmentTeam = listOf(
-                DevelopmentTeamMemberResponse("3", "(Uncredited)", "Designer"),
+                DevelopmentTeamMember("3", "(Uncredited)", "Designer"),
             ),
-            statistics = GameStatisticsResponse(
+            statistics = GameStatistics(
                 usersOwned = 54,
                 averageRating = "7.31034",
                 totalVotes = 29,
-                shoppingStatistics = ShoppingStatisticsResponse(
+                shoppingStatistics = ShoppingStatistics(
                     forTrade = 2,
                     wantInTrade = 4,
                     wishlist = 8,
@@ -113,11 +113,11 @@ class GameDetailMapperTest {
             expansions = emptyList(),
             publishers = emptyList(),
             developmentTeam = emptyList(),
-            statistics = GameStatisticsResponse(
+            statistics = GameStatistics(
                 usersOwned = 100,
                 averageRating = "8.50000",
                 totalVotes = 50,
-                shoppingStatistics = ShoppingStatisticsResponse(0, 0, 10),
+                shoppingStatistics = ShoppingStatistics(0, 0, 10),
             ),
         )
 
@@ -145,11 +145,11 @@ class GameDetailMapperTest {
             expansions = emptyList(),
             publishers = emptyList(),
             developmentTeam = emptyList(),
-            statistics = GameStatisticsResponse(
+            statistics = GameStatistics(
                 usersOwned = 10,
                 averageRating = "invalid_rating",
                 totalVotes = 5,
-                shoppingStatistics = ShoppingStatisticsResponse(1, 2, 3),
+                shoppingStatistics = ShoppingStatistics(1, 2, 3),
             ),
         )
 
@@ -161,9 +161,9 @@ class GameDetailMapperTest {
 
     @Test
     fun `should map individual response models to domain models`() {
-        val categoryResponse = CategoryResponse("123", "Strategy")
-        val mechanicResponse = MechanicResponse("456", "Worker Placement")
-        val publisherResponse = PublisherResponse("789", "Cool Games Inc")
+        val categoryResponse = Category("123", "Strategy")
+        val mechanicResponse = Mechanic("456", "Worker Placement")
+        val publisherResponse = Publisher("789", "Cool Games Inc")
 
         val category = categoryResponse.toDomain()
         val mechanic = mechanicResponse.toDomain()
