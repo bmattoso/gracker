@@ -24,17 +24,17 @@ data class GameDetailResponse(
     @SerialName("minimum_player_age")
     val minimumPlayerAge: Int?,
     @SerialName("suggested_players_age_poll")
-    val suggestedPlayersAgePoll: List<SuggestedPlayersAgePoll> = emptyList(),
+    val suggestedPlayersAgePoll: List<SuggestedPlayersAgePollResponse> = emptyList(),
     @SerialName("categories")
-    val categories: List<Category>? = null,
+    val categories: List<CategoryResponse>? = null,
     @SerialName("mechanic")
-    val mechanic: List<Mechanic>? = null,
+    val mechanic: List<MechanicResponse>? = null,
     @SerialName("expansions")
-    val expansions: List<Expansion>? = null,
+    val expansions: List<ExpansionResponse>? = null,
     @SerialName("publishers")
-    val publishers: List<Publisher>? = null,
+    val publishers: List<PublisherResponse>? = null,
     @SerialName("development_team")
-    val developmentTeam: List<DevelopmentTeamMember>? = null,
+    val developmentTeam: List<DevelopmentTeamMemberResponse>? = null,
     @SerialName("statistics")
-    val statistics: GameStatistics?,
+    val statistics: GameStatisticsResponse?,
 )

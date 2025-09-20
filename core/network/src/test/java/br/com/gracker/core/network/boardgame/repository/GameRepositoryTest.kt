@@ -1,14 +1,14 @@
 package br.com.gracker.core.network.boardgame.repository
 
 import br.com.gracker.core.network.boardgame.service.BoardGameService
-import br.com.gracker.core.network.boardgame.service.response.Category
-import br.com.gracker.core.network.boardgame.service.response.DevelopmentTeamMember
+import br.com.gracker.core.network.boardgame.service.response.CategoryResponse
+import br.com.gracker.core.network.boardgame.service.response.DevelopmentTeamMemberResponse
 import br.com.gracker.core.network.boardgame.service.response.GameDetailResponse
-import br.com.gracker.core.network.boardgame.service.response.GameStatistics
-import br.com.gracker.core.network.boardgame.service.response.Mechanic
-import br.com.gracker.core.network.boardgame.service.response.Publisher
-import br.com.gracker.core.network.boardgame.service.response.ShoppingStatistics
-import br.com.gracker.core.network.boardgame.service.response.SuggestedPlayersAgePoll
+import br.com.gracker.core.network.boardgame.service.response.GameStatisticsResponse
+import br.com.gracker.core.network.boardgame.service.response.MechanicResponse
+import br.com.gracker.core.network.boardgame.service.response.PublisherResponse
+import br.com.gracker.core.network.boardgame.service.response.ShoppingStatisticsResponse
+import br.com.gracker.core.network.boardgame.service.response.SuggestedPlayersAgePollResponse
 import com.google.common.truth.Truth.assertThat
 import io.mockk.coEvery
 import io.mockk.coVerify
@@ -43,16 +43,16 @@ class GameRepositoryTest {
                 maximumPlayingTime = 60,
                 minimumPlayerAge = 10,
                 suggestedPlayersAgePoll = emptyList(),
-                categories = listOf(Category("1", "Strategy")),
-                mechanic = listOf(Mechanic("2", "Worker Placement")),
+                categories = listOf(CategoryResponse("1", "Strategy")),
+                mechanic = listOf(MechanicResponse("2", "Worker Placement")),
                 expansions = emptyList(),
-                publishers = listOf(Publisher("3", "Test Publisher")),
+                publishers = listOf(PublisherResponse("3", "Test Publisher")),
                 developmentTeam = emptyList(),
-                statistics = GameStatistics(
+                statistics = GameStatisticsResponse(
                     usersOwned = 100,
                     averageRating = "8.5",
                     totalVotes = 20,
-                    shoppingStatistics = ShoppingStatistics(1, 2, 3),
+                    shoppingStatistics = ShoppingStatisticsResponse(1, 2, 3),
                 ),
             )
 
@@ -116,30 +116,30 @@ class GameRepositoryTest {
                 maximumPlayingTime = 120,
                 minimumPlayerAge = 8,
                 suggestedPlayersAgePoll = listOf(
-                    SuggestedPlayersAgePoll("10", 5),
-                    SuggestedPlayersAgePoll("12", 3),
+                    SuggestedPlayersAgePollResponse("10", 5),
+                    SuggestedPlayersAgePollResponse("12", 3),
                 ),
                 categories = listOf(
-                    Category("cat1", "Family"),
-                    Category("cat2", "Strategy"),
+                    CategoryResponse("cat1", "Family"),
+                    CategoryResponse("cat2", "Strategy"),
                 ),
                 mechanic = listOf(
-                    Mechanic("mech1", "Dice Rolling"),
-                    Mechanic("mech2", "Hand Management"),
+                    MechanicResponse("mech1", "Dice Rolling"),
+                    MechanicResponse("mech2", "Hand Management"),
                 ),
                 expansions = emptyList(),
                 publishers = listOf(
-                    Publisher("pub1", "Amazing Games"),
+                    PublisherResponse("pub1", "Amazing Games"),
                 ),
                 developmentTeam = listOf(
-                    DevelopmentTeamMember("dev1", "John Doe", "Designer"),
-                    DevelopmentTeamMember("dev2", "Jane Smith", "Artist"),
+                    DevelopmentTeamMemberResponse("dev1", "John Doe", "Designer"),
+                    DevelopmentTeamMemberResponse("dev2", "Jane Smith", "Artist"),
                 ),
-                statistics = GameStatistics(
+                statistics = GameStatisticsResponse(
                     usersOwned = 500,
                     averageRating = "7.85",
                     totalVotes = 124,
-                    shoppingStatistics = ShoppingStatistics(10, 15, 25),
+                    shoppingStatistics = ShoppingStatisticsResponse(10, 15, 25),
                 ),
             )
 

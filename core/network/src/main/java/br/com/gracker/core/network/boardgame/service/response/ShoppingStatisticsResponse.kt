@@ -4,7 +4,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class ShoppingStatistics(
+data class ShoppingStatisticsResponse(
     @SerialName("for_trade")
     val forTrade: Int,
     @SerialName("want_in_trade")

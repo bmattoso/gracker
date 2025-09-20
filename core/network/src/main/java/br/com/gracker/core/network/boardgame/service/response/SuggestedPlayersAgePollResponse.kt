@@ -4,7 +4,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class SuggestedPlayersAgePoll(
+data class SuggestedPlayersAgePollResponse(
     @SerialName("age")
     val age: String,
     @SerialName("votes")

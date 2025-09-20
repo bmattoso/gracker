@@ -9,15 +9,16 @@ import br.com.gracker.core.network.boardgame.domain.Mechanic
 import br.com.gracker.core.network.boardgame.domain.Publisher
 import br.com.gracker.core.network.boardgame.domain.ShoppingStatistics
 import br.com.gracker.core.network.boardgame.domain.SuggestedPlayersAgePoll
+import br.com.gracker.core.network.boardgame.service.response.CategoryResponse
+import br.com.gracker.core.network.boardgame.service.response.DevelopmentTeamMemberResponse
+import br.com.gracker.core.network.boardgame.service.response.ExpansionResponse
 import br.com.gracker.core.network.boardgame.service.response.GameDetailResponse
+import br.com.gracker.core.network.boardgame.service.response.GameStatisticsResponse
+import br.com.gracker.core.network.boardgame.service.response.MechanicResponse
+import br.com.gracker.core.network.boardgame.service.response.PublisherResponse
+import br.com.gracker.core.network.boardgame.service.response.ShoppingStatisticsResponse
+import br.com.gracker.core.network.boardgame.service.response.SuggestedPlayersAgePollResponse
 import java.time.Year
-import br.com.gracker.core.network.boardgame.service.response.Category as CategoryResponse
-import br.com.gracker.core.network.boardgame.service.response.DevelopmentTeamMember as DevelopmentTeamMemberResponse
-import br.com.gracker.core.network.boardgame.service.response.Expansion as ExpansionResponse
-import br.com.gracker.core.network.boardgame.service.response.GameStatistics as GameStatisticsResponse
-import br.com.gracker.core.network.boardgame.service.response.Mechanic as MechanicResponse
-import br.com.gracker.core.network.boardgame.service.response.Publisher as PublisherResponse
-import br.com.gracker.core.network.boardgame.service.response.ShoppingStatistics as ShoppingStatisticsResponse
 
 fun GameDetailResponse.toDomain(): GameDetail {
     return GameDetail(
@@ -76,7 +77,7 @@ fun DevelopmentTeamMemberResponse.toDomain(): DevelopmentTeamMember {
     )
 }
 
-fun br.com.gracker.core.network.boardgame.service.response.SuggestedPlayersAgePoll.toDomain(): SuggestedPlayersAgePoll {
+fun SuggestedPlayersAgePollResponse.toDomain(): SuggestedPlayersAgePoll {
     return SuggestedPlayersAgePoll(
         age = age,
         votes = votes,

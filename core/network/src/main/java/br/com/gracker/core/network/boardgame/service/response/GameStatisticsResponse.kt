@@ -4,7 +4,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class GameStatistics(
+data class GameStatisticsResponse(
     @SerialName("users_owned")
     val usersOwned: Int,
     @SerialName("average_rating")
@@ -12,5 +12,5 @@ data class GameStatistics(
     @SerialName("total_votes")
     val totalVotes: Int,
     @SerialName("shopping_statistics")
-    val shoppingStatistics: ShoppingStatistics,
+    val shoppingStatistics: ShoppingStatisticsResponse,
 )
