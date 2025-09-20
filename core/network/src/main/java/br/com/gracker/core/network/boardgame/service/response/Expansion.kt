@@ -4,9 +4,9 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class SuggestedPlayersAgePoll(
-    @SerialName("age")
-    val age: String,
-    @SerialName("votes")
-    val votes: Int,
+data class Expansion(
+    @SerialName("id")
+    val id: String,
+    @SerialName("name")
+    val name: String,
 )

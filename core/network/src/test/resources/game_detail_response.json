@@ -1,0 +1,50 @@
+{
+  "id": "123",
+  "name": "Green Thumb Cards",
+  "description": "In this card game players are competing gardeners, attempting to collect sets of various plants in order to put them into their stacks.  In the meantime their incomplete sets are vulnerable to various event cards and other players.  Players have a number of attack cards at their disposal which they can use to wreak havoc on opponents' gardens.  These cards range from bugs and pests to kids tromping through the garden, and even animals that chew up or pee all over the plants.&#10;&#10;",
+  "year_published": 1996,
+  "minimum_players": 2,
+  "maximum_players": 5,
+  "suggested_players_age_poll": [
+    {"age": "2", "votes": 0},
+    {"age": "3", "votes": 0},
+    {"age": "4", "votes": 0},
+    {"age": "5", "votes": 0},
+    {"age": "6", "votes": 0},
+    {"age": "8", "votes": 1},
+    {"age": "10", "votes": 0},
+    {"age": "12", "votes": 0},
+    {"age": "14", "votes": 0},
+    {"age": "16", "votes": 0},
+    {"age": "18", "votes": 0},
+    {"age": "21 and up", "votes": 0}
+  ],
+  "minimum_playing_time": 45,
+  "maximum_playing_time": 45,
+  "minimum_player_age": 7,
+  "categories": [
+    {"id": "1002", "name": "Card Game"}
+  ],
+  "mechanic": [
+    {"id": "2004", "name": "Set Collection"},
+    {"id": "2686", "name": "Take That"}
+  ],
+  "expansions": [],
+  "publishers": [
+    {"id": "2330", "name": "Playful Minds"}
+  ],
+  "development_team": [
+    {"id": "3", "name": "(Uncredited)", "role": "Designer"},
+    {"id": "3", "name": "(Uncredited)", "role": "Artist"}
+  ],
+  "statistics": {
+    "users_owned": 54,
+    "average_rating": "7.31034",
+    "total_votes": 29,
+    "shopping_statistics": {
+      "for_trade": 2,
+      "want_in_trade": 4,
+      "wishlist": 8
+    }
+  }
+}

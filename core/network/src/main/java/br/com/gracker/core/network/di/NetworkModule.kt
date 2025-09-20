@@ -9,7 +9,7 @@ import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import java.util.concurrent.TimeUnit
 
-private const val TIMEOUT_SECONDS = 60L
+private const val TIMEOUT_SECONDS = 20L
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -23,7 +23,7 @@ object NetworkModule {
         }.build()
 
     @Provides
-    fun provideRetrofit(okHttpClient: OkHttpClient) =
+    fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit =
         Retrofit.Builder().apply {
             baseUrl(BuildConfig.SERVER_BASE_URL)
             client(okHttpClient)

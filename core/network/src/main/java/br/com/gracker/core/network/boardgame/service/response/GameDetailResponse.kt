@@ -1,20 +1,40 @@
 package br.com.gracker.core.network.boardgame.service.response
 
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class GameDetailResponse(
+    @SerialName("id")
     val id: String,
+    @SerialName("name")
     val name: String,
+    @SerialName("description")
     val description: String,
+    @SerialName("year_published")
     val yearPublished: Int,
+    @SerialName("minimum_players")
     val minimumPlayers: Int,
+    @SerialName("maximum_players")
     val maximumPlayers: Int,
+    @SerialName("minimum_playing_time")
     val minimumPlayingTime: Int?,
+    @SerialName("maximum_playing_time")
     val maximumPlayingTime: Int?,
+    @SerialName("minimum_player_age")
     val minimumPlayerAge: Int?,
-    var suggestedPlayersAgePoll: List<SuggestedPlayersAgePoll>,
-//    val categories: List<Categories>,
-//    val mechanic: List<Mechanic>,
-//    val expansions: List<Expansions>,
-//    val publishers: List<Publishers>,
-//    val developmentTeam: List<DevelopmentTeam>,
-//    val statistics: Statistics?,
+    @SerialName("suggested_players_age_poll")
+    val suggestedPlayersAgePoll: List<SuggestedPlayersAgePoll> = emptyList(),
+    @SerialName("categories")
+    val categories: List<Category>? = null,
+    @SerialName("mechanic")
+    val mechanic: List<Mechanic>? = null,
+    @SerialName("expansions")
+    val expansions: List<Expansion>? = null,
+    @SerialName("publishers")
+    val publishers: List<Publisher>? = null,
+    @SerialName("development_team")
+    val developmentTeam: List<DevelopmentTeamMember>? = null,
+    @SerialName("statistics")
+    val statistics: GameStatistics?,
 )

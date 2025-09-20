@@ -11,5 +11,5 @@ import retrofit2.Retrofit
 @InstallIn(ActivityComponent::class)
 object ServiceModule {
     @Provides
-    fun providesBoardGameService(retrofit: Retrofit) = retrofit.create(BoardGameService::class.java)
+    fun providesBoardGameService(retrofit: Retrofit): BoardGameService = retrofit.create(BoardGameService::class.java)
 }

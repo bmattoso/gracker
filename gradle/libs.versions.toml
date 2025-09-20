@@ -6,6 +6,7 @@ android-startup = "1.1.1"
 compose-bom = "2024.05.00"
 compose-compiler-extension = "1.5.11"
 core-ktx = "1.13.1"
+coroutines = "1.7.3"
 detekt = "1.23.6"
 espresso-core = "3.5.1"
 firebase = "32.8.1"
@@ -17,14 +18,18 @@ junit = "4.13.2"
 hilt = "2.51.1"
 jaxb = "2.3.1"
 kotlin = "1.9.23"
+kotlinx-serialization = "1.6.0"
 kover = "0.7.6"
 ktlint = "12.1.0"
 ksp = "1.9.23-1.0.20"
 lifecycle-runtime-ktx = "2.7.0"
 lokalise = "2.1.1"
+mockk = "1.13.8"
 okhttp = "4.12.0"
 paparazzi = "1.3.3"
 retrofit = "2.11.0"
+retrofit-kotlinx-serialization = "1.0.0"
+truth = "1.1.4"
 
 # Android SDK versions
 minSdk = "24"
@@ -63,6 +68,19 @@ ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 material3 = { group = "androidx.compose.material3", name = "material3" }
 
 retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+retrofit-kotlinx-serialization = { group = "com.jakewharton.retrofit2", name = "retrofit2-kotlinx-serialization-converter", version.ref = "retrofit-kotlinx-serialization" }
+
+# Kotlinx Serialization
+kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
+
+# Coroutines
+kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
+kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutines" }
+
+# Testing
+mockk = { group = "io.mockk", name = "mockk", version.ref = "mockk" }
+mockk-android = { group = "io.mockk", name = "mockk-android", version.ref = "mockk" }
+truth = { group = "com.google.truth", name = "truth", version.ref = "truth" }
 
 # Build Logic dependencies
 android-gradle-plugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
@@ -80,6 +98,7 @@ google-services = { id = "com.google.gms.google-services", version.ref = "google
 hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 
 kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlinx-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 kover = { id = "org.jetbrains.kotlinx.kover", version.ref = "kover" }
 ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
